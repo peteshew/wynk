@@ -1,0 +1,53 @@
+body {
+  background-color: #000000; 
+  margin: 0 auto;
+}
+
+.menubox {
+  width: 100%;
+  display: grid;
+  margin-bottom:5px;
+}
+
+.menubox * {
+	border-radius: 8px;
+	margin: 2px;
+	padding:0;
+}
+
+.mybutton {
+	border-radius: 8px;
+	margin: 2px;
+	padding:0;
+}
+
+.gridbox {
+  width: 100%;
+  display: grid;
+  position: absolute; 
+}
+
+.gridbox div {
+	margin: 2px;
+	padding:0;
+}
+
+
+.gridbox < canvas {
+	position: absolute ; 
+}
+
+.chartbox {
+  width: 100%;
+  display: grid;
+  position: relative; 
+}
+
+.chartbox div {
+	margin: 2px;
+	padding:0;
+}
+
+.chartbox canvas {
+	position: absolute ; 
+}
