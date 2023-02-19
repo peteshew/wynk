@@ -1,6 +1,22 @@
 /* ===============================================================================================
 
+	Wynk was conceived as a replacement for Blynk 1 as a front end for Node Red 
+	following the removal of support and future availability together with the 
+	loss of the local server option in v2.
+	
+	Author: Pete Shew
+	Date:	March 2023
+	Contact: peteshew@gmail.com
+
 The Wynk class is the top level for the entire app. It creates the tabs. 
+
+Possible ToDos
+
+	-	Get config from website instead of from Node Red, including Node Red server and 
+		web socket address
+	-	Build all CSS so remove need for separate file
+
+		These two could lead to absolute mininimum html file
 
 /* =============================================================================================== */
 
