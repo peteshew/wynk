@@ -10,6 +10,8 @@
 
 The Wynk class is the top level for the entire app. It creates the tabs. 
 
+	v1.1	Pusher message switched to 'delta' from 'payload'
+
 Possible ToDos
 
 	-	Get config from website instead of from Node Red, including Node Red server and 
@@ -2139,8 +2141,8 @@ class Pusher extends Tile
 	{
 		if (this.step !== 0)
 		{
-			let payload = this.step * this.fast ;
-			var msg = {"topic":"change","payload":payload,"state":1} ;
+			let delta = this.step * this.fast ;
+			var msg = {"topic":"change","delta":delta,"state":1} ;
 			this.sendMsg(msg) ;
 		}
 	}
