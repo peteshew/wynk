@@ -158,13 +158,13 @@ Messages to the slider may have the 'state' and/or 'value' settings.
 
 ### The Pusher tile
 
-This is a bit of an experiment to provide a tile that allows rapid large changes together with fine control when near the desired value. It can send either negative or positive values and the values become larger the further from the centre the touch. The two properties are:
+This is a bit of an experiment to provide a tile that allows rapid large changes together with fine control when near the desired value. It can send either negative or positive values in the 'delta' value and the values become larger the further from the centre the touch. The two properties are:
 * 'fast' - a value to control the size of the change messages values - use trial end error find a good value.
 * 'power' - a power value. again trial and error, although 2 for square law is a good start.
 
-Once touched, a 300mS timer is set running until the pusher is released. The initial touch and subsequent moves are used to calculate a position between -1 and 1 according to position of the touch relative the centre of the pusher. The actual value that will be sent is found by raising the position value to the configured 'power' and then multiplying by the configured 'fast'.
+Once touched, a 300mS timer is set running until the pusher is released. The initial touch and subsequent moves are used to calculate a position between -1 and 1 according to position of the touch relative the centre of the pusher. The actual delta that will be sent is found by raising the position value to the configured 'power' and then multiplying by the configured 'fast'.
 
-The code in Node Red should apply the values as they arrive to a modify a stored value and usually send the resultant value to a test tile as feedback on the resultant setting.
+The code in Node Red should apply the deltas as they arrive to a modify a stored value and usually send the resultant value to a test tile as feedback on the resultant setting.
 ## Debugging
 Debugging of problems within wynk.js can be usually done with a standard browser in developer mode, however problems which are specific to a particular phone or device are more problematic.  
 There are tools available to debug on the actual device which are out of the scope of this document, but there are two ways of problem analysis that can be used.
